@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* // #2F3C7E, #FBEAEB */
+
+:root {
+  --bgColor :#FBEAEB;
+  --mainColor : #2F3C7E;
+}
