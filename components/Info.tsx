@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import Avatar from "@/public/avatar.jpg";
 import { TypeAnimation } from "react-type-animation";
+import Social from "./Social";
 
 function Info() {
   return (
@@ -11,7 +12,8 @@ function Info() {
       <div className="relative mt-4">
         <Image
           src={Avatar}
-          sizes="50vw"
+          width={250}
+          height={250}
           alt="Avatar"
           placeholder="blur"
           loading="lazy"
@@ -22,12 +24,10 @@ function Info() {
         sequence={[
           // Same substring at the start will only be typed out once, initially
           "I am Arush Sharma",
-          1000, // wait 1s before replacing "Mice" with "Hamsters"
-          "I am Software Enginner",
+          3000, // wait 1s before replacing "Mice" with "Hamsters"
+          "I am Software Engineer",
           1000,
           "I am Full Stack Developer",
-          1000,
-          "I am Introvert",
           1000,
         ]}
         wrapper="span"
@@ -35,6 +35,18 @@ function Info() {
         className="text-4xl font-bold relative top-4"
         repeat={Infinity}
       />
+
+      <p className="text-lg w-[1000px] text-center mt-12">
+        I am a passionate developer with <b>3+ years</b> of unprofessional
+        experience in project development. My expertise lies in both{" "}
+        <b>frontend and backend development</b>. I specialize in creating
+        dynamic user interfaces using React.js and building robust backend
+        services with Node.js. Whether it’s crafting elegant frontend components
+        or designing efficient APIs, I thrive on solving complex problems and
+        delivering seamless user experiences.
+      </p>
+
+      <Social />
     </div>
   );
 }
