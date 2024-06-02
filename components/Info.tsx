@@ -17,7 +17,7 @@ function Info() {
           alt="Avatar"
           placeholder="blur"
           loading="lazy"
-          className="rounded-full shadow-xl border-4 border-zinc-100"
+          className="rounded-full shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] border-4 border-zinc-100"
         />
       </div>
       <TypeAnimation
@@ -26,9 +26,9 @@ function Info() {
           "I am Arush Sharma",
           3000, // wait 1s before replacing "Mice" with "Hamsters"
           "I am Software Engineer",
-          1000,
+          4000,
           "I am Full Stack Developer",
-          1000,
+          4000,
         ]}
         wrapper="span"
         speed={50}

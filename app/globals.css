@@ -34,8 +34,6 @@
 
     --radius: 0.5rem;
 
-    --bgColor: #fbeaeb;
-    --mainColor: #2f3c7e;
   }
 }
 
@@ -44,7 +42,8 @@
   align-items: center;
   justify-content: center;
   width: auto;
-  font-size: 14px;
-  padding-inline: 20px;
-  padding-block: 10px;
+  font-size: 18px;
+  padding-inline: 25px;
+  padding-block: 14px;
+  gap: 5px;
 }
