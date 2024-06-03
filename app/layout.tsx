@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Fira_Code } from "next/font/google";
+
+const firacode = Fira_Code({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "<CodeTonic/>",
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-green-200 flex justify-center`}>
+      <body
+        className={`${firacode.className} bg-green-200 flex justify-center`}
+      >
         {children}
       </body>
     </html>

@@ -17,27 +17,10 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { motion } from "framer-motion";
 
 function Skills() {
-  const allSkils = ["HTML", "CSS", "TypeScript"];
-  //   Languages: C++, Python, JavaScript, Typescript, HTML, CSS, Go Lang
-  //   Frontend Frameworks: ReactJS, NextJS
-  //   Backend Frameworks: NodeJS, Express
-  //   Database: MongoDB, Firebase, MySQL, Redis, PostgreSQL
-  //   Others: Git & GitHub, RESTful APIs, OOPS, MVC, Docker
-  //   Soft skills: Technical Communication, Technical leadership, Team player
-  //   Tools: Linux, Visual Studio Code, Figma for Web Design
-  // <motion.div
-  // initial={{ scale: 0 }}
-  // animate={{ rotate: 180, scale: 1 }}
-  // transition={{
-  //   type: "spring",
-  //   stiffness: 260,
-  //   damping: 20
-  // }}
-
   return (
     <div className="flex flex-col items-center mt-24">
       <h1 className="text-4xl font-bold underline">Skills</h1>
-      <div className="mt-8 flex gap-3 font-bold flex-wrap w-[1000px]">
+      <div className="mt-8 flex gap-3 font-bold flex-wrap flex-col px-12 md:flex-row w-full md:w-[1200px]">
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}

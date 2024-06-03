@@ -32,11 +32,13 @@ function Info() {
         ]}
         wrapper="span"
         speed={50}
-        className="text-4xl font-bold relative top-4"
+        className="text-2xl md:text-4xl font-bold relative top-4"
         repeat={Infinity}
       />
 
-      <p className="text-lg w-[1000px] text-center mt-12">
+      <p
+        className={`px-2 text-md md:text-lg w-full md:w-[1000px] text-center mt-12`}
+      >
         I am a passionate developer with <b>3+ years</b> of unprofessional
         experience in project development. My expertise lies in both{" "}
         <b>frontend and backend development</b>. I specialize in creating

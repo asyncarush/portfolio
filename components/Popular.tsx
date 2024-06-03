@@ -17,13 +17,13 @@ function Populars() {
     <div className="flex flex-col w-full mt-24 items-center">
       <h1 className="text-4xl font-bold underline">Popular Projects</h1>
 
-      <div className="flex justify-between gap-10">
-        <div className="rounded-2xl hover:scale-105 duration-500 justify-between cursor-pointer w-[600px] mt-12 p-8 bg-slate-100 shadow-[2px_2px_18px_3px_#276749] flex flex-col items-center gap-8">
-          <div>
+      <div className="flex md:flex-row flex-col items-center justify-between gap-10">
+        <div className="rounded-2xl hover:scale-105 duration-500 justify-between cursor-pointer w-[400px] md:w-[600px] mt-12 p-8 bg-slate-100 shadow-[2px_2px_18px_3px_#276749] flex flex-col items-center gap-8">
+          <div className="relative  md:w-[600px] h-auto">
             <Image
               src={makematesThumbnail}
-              width={"600"}
-              height={"300"}
+              width="0"
+              height="0"
               alt="makemates-image"
             />
           </div>
@@ -57,7 +57,7 @@ function Populars() {
           </div>
         </div>
 
-        <div className="w-[600px] rounded-2xl hover:scale-105 duration-500 cursor-pointer justify-between mt-12 p-8 bg-slate-100 shadow-[2px_2px_18px_3px_#276749] flex flex-col items-center gap-8">
+        <div className="rounded-2xl hover:scale-105 duration-500 justify-between cursor-pointer w-[400px] md:w-[600px] mt-12 p-8 bg-slate-100 shadow-[2px_2px_18px_3px_#276749] flex flex-col items-center gap-8">
           <div>
             <Image
               src={chat}

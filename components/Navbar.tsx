@@ -1,8 +1,18 @@
 import Image from "next/image";
 import Logo from "@/public/logo.png";
 import Link from "next/link";
-import { useScroll, useSpring } from "framer-motion";
-import { useEffect } from "react";
+
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMarkdown } from "@fortawesome/free-brands-svg-icons";
+import { FaBars } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -13,22 +23,49 @@ export default function Navbar() {
             <Image src={Logo} width="220" height="100" alt="codetonic logo" />
           </Link>
         </div>
-        <ul className="flex gap-12 text-xl items-center text-white pr-8 font-medium">
+
+        <ul className="hidden md:flex gap-12 text-xl items-center text-white pr-8 font-medium">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/">HOME</Link>
           </li>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link href="/blog">BLOG</Link>
           </li>
           <li>
-            <Link href="/youtube">Youtube</Link>
+            <Link href="/youtube">YOUTUBE</Link>
           </li>
           <li>
-            <Link href="/connect">Connect</Link>
+            <Link href="/connect">CONNECT</Link>
           </li>
         </ul>
+        <div className="md:hidden md:z-[999999999]">
+          <Sheet>
+            <SheetTrigger className="pr-8">
+              <FaBars className="text-white w-6 h-6" />
+            </SheetTrigger>
+            <SheetContent className="w-full top-[80px]">
+              <SheetHeader>
+                <SheetDescription>
+                  <ul className="flex flex-col gap-8">
+                    <li>
+                      <Link href="/">HOME</Link>
+                    </li>
+                    <li>
+                      <Link href="/blog">BLOG</Link>
+                    </li>
+                    <li>
+                      <Link href="/youtube">YOUTUBE</Link>
+                    </li>
+                    <li>
+                      <Link href="/connect">CONNECT</Link>
+                    </li>
+                  </ul>
+                </SheetDescription>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
+        </div>
       </header>
-      <div></div>
     </>
   );
 }
