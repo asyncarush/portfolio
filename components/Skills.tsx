@@ -13,88 +13,43 @@ import {
   faReact,
   faUbuntu,
 } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import cpp from "@/public/cpp.png";
+import html from "@/public/html.png";
+import css from "@/public/css.png";
+import typescript from "@/public/typescript.png";
+import go from "@/public/go.png";
+import python from "@/public/python.png";
+import react from "@/public/react.webp";
+import next from "@/public/next.png";
+import redis from "@/public/redis.png";
+import firebase from "@/public/firebase.png";
+import ubuntu from "@/public/ubuntu.png";
+import docker from "@/public/docker.png";
+import api from "@/public/api.webp";
+import github from "@/public/github.png";
+import mongodb from "@/public/mongodb.png";
 
 function Skills() {
   return (
     <div className="flex flex-col items-center mt-24">
       <h1 className="text-4xl font-bold underline">Skills</h1>
-      <div className="mt-8 flex gap-3 font-bold flex-wrap flex-col px-12 md:flex-row w-full md:w-[1200px]">
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{
-            type: "tween",
-            damping: 50,
-            duration: 0.1,
-          }}
-        >
-          <Badge variant={"default"} className="badgeSkills">
-            Core C++
-          </Badge>
-        </motion.div>
-        <Badge variant={"default"} className="badgeSkills">
-          <FontAwesomeIcon icon={faPython} /> Python
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          <FontAwesomeIcon icon={faJava} />
-          TypeScript/JavaScript
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          <FontAwesomeIcon icon={faHtml5} />
-          HTML
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          <FontAwesomeIcon icon={faCss3} />
-          CSS
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          <FontAwesomeIcon icon={faGolang} />
-          Go
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          <FontAwesomeIcon icon={faReact} />
-          ReactJS
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          {/* <FontAwesomeIcon icon={} /> */}
-          NextJS
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          MongoDB
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          MySQL
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          Firebase
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          Redis
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          <FontAwesomeIcon icon={faGithub} />
-          Github & Git
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          RESTful APIs
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          <FontAwesomeIcon icon={faDocker} />
-          Docker
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          <FontAwesomeIcon icon={faUbuntu} />
-          Linux
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          <FontAwesomeIcon icon={faCodepen} />
-          VS Code
-        </Badge>
-        <Badge variant={"default"} className="badgeSkills">
-          Model View Controller
-        </Badge>
+      <div className="mt-8 items-center justify-center flex gap-8 flex-wrap flex-col px-12 md:flex-row w-full md:w-[1400px]">
+        <Image src={cpp} alt="cpp" width="80" height="80" />
+        <Image src={html} alt="html" width="80" height="80" />
+        <Image src={css} alt="css" width="80" height="80" />
+        <Image src={python} alt="python" width="80" height="80" />
+        <Image src={typescript} alt="typescript" width="80" height="80" />
+        <Image src={go} alt="go" width="80" height="80" />
+        <Image src={react} alt="react" width="80" height="80" />
+        <Image src={next} alt="next" width="80" height="80" />
+        <Image src={redis} alt="redis" width="250" height="80" />
+        <Image src={firebase} alt="firebase" width="80" height="80" />
+        <Image src={ubuntu} alt="ubuntu" width="100" height="80" />
+        <Image src={docker} alt="docker" width="80" height="80" />
+        <Image src={github} alt="github" width="80" height="80" />
+        <Image src={mongodb} alt="mongodb" width="80" height="80" />
+        <Image src={api} alt="api" width="80" height="80" />
       </div>
     </div>
   );
