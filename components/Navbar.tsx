@@ -17,14 +17,15 @@ import { FaBars } from "react-icons/fa";
 export default function Navbar() {
   return (
     <>
-      <header className="sticky top-0 z-[999999] opacity-90 flex bg-emerald-600 h-[80px] w-full drop-shadow-lg items-center justify-between">
+      <header className="sticky top-0 bg-white z-[999999] opacity-90 flex  border-b-violet-700 shadow-lg shadow-violet-300 h-[80px] w-full drop-shadow-lg items-center justify-between">
         <div className="relative left-12">
-          <Link href="/">
-            <Image src={Logo} width="220" height="100" alt="codetonic logo" />
+          <Link href="/" className="text-violet-700  text-3xl font-bold">
+            {/* <Image src={Logo} width="220" height="100" alt="codetonic logo" /> */}
+            {`<CodeTonic />`}
           </Link>
         </div>
 
-        <ul className="hidden md:flex gap-12 text-xl items-center text-white pr-8 font-medium">
+        <ul className="hidden md:flex gap-12 text-2xl items-center pr-8 font-medium">
           <li>
             <Link href="/">HOME</Link>
           </li>

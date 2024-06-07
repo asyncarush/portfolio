@@ -6,7 +6,7 @@ import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen w-full md:w-[1400px] flex-col bg-white/50 ">
+    <main className="flex min-h-screen w-full flex-col bg-white/50 ">
       <Navbar />
       <Info />
       <Skills />

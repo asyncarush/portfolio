@@ -17,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${firacode.className} bg-green-200 flex justify-center`}
-      >
+      <body className={`${firacode.className} text-black flex justify-center`}>
         {children}
       </body>
     </html>
