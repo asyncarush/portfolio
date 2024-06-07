@@ -6,7 +6,7 @@ import Avatar from "@/public/avatar.jpg";
 import { TypeAnimation } from "react-type-animation";
 import Social from "./Social";
 
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 function Info() {
   const sliderVarient: any = {
@@ -43,7 +43,7 @@ function Info() {
           alt="Avatar"
           placeholder="blur"
           loading="lazy"
-          className="rounded-full shadow-lg border-4 border-zinc-100"
+          className="rounded-full border-4 border-zinc-100 shadow-[0px_3px_30px_0px_#44337a]"
         />
       </div>
       <TypeAnimation
@@ -58,11 +58,15 @@ function Info() {
         ]}
         wrapper="span"
         speed={50}
-        className="text-2xl md:text-4xl font-bold relative top-4"
+        className="text-3xl md:text-4xl font-bold relative top-4"
         repeat={Infinity}
       />
 
-      <motion.p className="px-2 text-md leading-6 md:text-2xl w-full md:w-[1400px] text-center mt-12">
+      <motion.p
+        initial={{ y: -10 }}
+        animate={{ y: 0, transition: { type: "spring", duration: 2 } }}
+        className="px-2 text-md leading-6 md:text-2xl w-full md:w-[1400px] text-center mt-12"
+      >
         I am a passionate developer with <b>3+ years</b> of unprofessional
         experience in project development. My expertise lies in both{" "}
         <b>frontend and backend development</b>. I specialize in creating
@@ -79,7 +83,7 @@ function Info() {
         animate="animate"
         className="absolute w-[100%] text-[50vh] text-violet-700/10  whitespace-nowrap bottom-[-180px]"
       >
-        Coder Youtuber Influencer
+        Coder YouTuber Influencer
       </motion.div>
     </div>
   );

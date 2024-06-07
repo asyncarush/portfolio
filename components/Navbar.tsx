@@ -1,6 +1,5 @@
-import Image from "next/image";
-import Logo from "@/public/logo.png";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import {
   Sheet,
@@ -10,16 +9,32 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMarkdown } from "@fortawesome/free-brands-svg-icons";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaHome } from "react-icons/fa";
 
 export default function Navbar() {
+  const headerVariant = {
+    initial: {
+      y: -10,
+    },
+    animate: {
+      y: 0,
+      transition: {
+        type: "spring",
+        durations: 10,
+      },
+    },
+  };
+
   return (
     <>
-      <header className="sticky top-0 bg-white z-[999999] opacity-90 flex  border-b-violet-700 shadow-lg shadow-violet-300 h-[80px] w-full drop-shadow-lg items-center justify-between">
+      <motion.header
+        variants={headerVariant}
+        initial="initial"
+        animate="animate"
+        className="sticky top-0 bg-white z-[999999] opacity-90 flex  border-b-violet-900 shadow-violet-300 h-[80px] w-full drop-shadow-md items-center justify-between"
+      >
         <div className="relative left-12">
-          <Link href="/" className="text-violet-700  text-3xl font-bold">
+          <Link href="/" className="text-violet-900  text-3xl font-bold">
             {/* <Image src={Logo} width="220" height="100" alt="codetonic logo" /> */}
             {`<CodeTonic />`}
           </Link>
@@ -27,16 +42,36 @@ export default function Navbar() {
 
         <ul className="hidden md:flex gap-12 text-2xl items-center pr-8 font-medium">
           <li>
-            <Link href="/">HOME</Link>
+            <Link
+              href="/"
+              className="bg-violet-900 py-2 px-4 rounded-2xl text-white text-md duration-300 hover:shadow-[0px_0px_17px_0px_#44337a]"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/blog">BLOG</Link>
+            <Link
+              href="/blog"
+              className="bg-violet-900 py-2 px-4 rounded-2xl text-white text-md duration-300 hover:shadow-[0px_0px_17px_0px_#44337a]"
+            >
+              Blog
+            </Link>
           </li>
           <li>
-            <Link href="/youtube">YOUTUBE</Link>
+            <Link
+              href="/youtube"
+              className="bg-violet-900 py-2 px-4 rounded-2xl text-white text-md duration-300 hover:shadow-[0px_0px_17px_0px_#44337a]"
+            >
+              Youtube
+            </Link>
           </li>
           <li>
-            <Link href="/connect">CONNECT</Link>
+            <Link
+              href="/connect"
+              className="bg-violet-900 py-2 px-4 rounded-2xl text-white text-md duration-300 hover:shadow-[0px_0px_17px_0px_#44337a]"
+            >
+              Connect
+            </Link>
           </li>
         </ul>
         <div className="md:hidden md:z-[999999999]">
@@ -66,7 +101,7 @@ export default function Navbar() {
             </SheetContent>
           </Sheet>
         </div>
-      </header>
+      </motion.header>
     </>
   );
 }
