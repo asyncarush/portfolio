@@ -33,7 +33,7 @@ export default function Social() {
           <FontAwesomeIcon icon={faInstagram} size="2x" />
         </Link>
         <Link
-          href="https://www.github.com/savagearush"
+          href="https://www.github.com/asyncarush"
           className="twitter social text-black-400"
         >
           <FontAwesomeIcon icon={faGithub} size="2x" />

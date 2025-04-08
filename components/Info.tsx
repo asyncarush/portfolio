@@ -48,7 +48,7 @@ function Info() {
       </div>
 
       {/* Rotating pink blob behind text */}
-      <div className="relative inline-block my-6">
+      <div className="relative inline-block my-6 w-[80%]">
         <div className="absolute -inset-2 bg-violet-200 rounded-full blur-xl opacity-30 animate-spin-slow" />
         <p className="relative z-10 text-lg sm:text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">
           Hi there! I&apos;m a passionate Backend & DevOps Engineer with 2+
@@ -67,7 +67,7 @@ function Info() {
       <Social />
 
       <motion.div
-        className="relative"
+        className="relative mt-4"
         initial={{ y: -5 }}
         animate={{
           y: 0,
@@ -80,6 +80,7 @@ function Info() {
       >
         <Image src={scroll} width={"40"} height={"40"} alt="scroll" />
       </motion.div>
+
       <motion.div
         variants={sliderVarient}
         initial="initial"

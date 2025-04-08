@@ -1,18 +1,5 @@
 import React from "react";
-import { Badge } from "@/components/ui/badge";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCodepen,
-  faCss3,
-  faDocker,
-  faDropbox,
-  faGolang,
-  faHtml5,
-  faJava,
-  faPython,
-  faReact,
-  faUbuntu,
-} from "@fortawesome/free-brands-svg-icons";
+
 import Image from "next/image";
 import cpp from "@/public/cpp.png";
 import html from "@/public/html.png";

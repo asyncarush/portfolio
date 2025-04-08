@@ -2,7 +2,7 @@ import { faChrome } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { ReactElement } from "react";
 import { FaGithub } from "react-icons/fa";
 
 export default function Project({
@@ -10,19 +10,21 @@ export default function Project({
   desc,
   liveHref,
   githubHref,
+  techStack,
 }: {
   mainImage: StaticImageData;
   desc: string;
   liveHref: string;
   githubHref: string;
+  techStack: ReactElement[];
 }) {
   return (
     <div className="rounded-md overflow-hidden hover:scale-105 duration-300 justify-between cursor-pointer w-[400px] h-[400px] mt-12 bg-slate-100 shadow-[0px_3px_30px_0px_#44337a] flex flex-col items-center gap-8">
-      <div className="relative group overflow-hidden ">
+      <div className="relative group overflow-hidden w-full h-[600px]">
         <Image
           src={mainImage}
           width={400}
-          height={300}
+          height={600}
           alt="makemates-image"
           className="transition-transform duration-300"
         />
@@ -44,13 +46,17 @@ export default function Project({
         <p className="text-center">{desc}</p>
       </div>
 
-      <div className="flex gap-8 mb-4">
+      <div className="flex align-center justify-center flex-wrap gap-1 p-2">
+        {techStack}
+      </div>
+
+      <div className="flex flex-col text-black gap-8 mb-4 text-xs h-[24px] align-center justify-center">
         <Link
           href={liveHref}
-          className="bg-red-500 p-4 rounded-3xl text-white font-bold"
+          className="p-3 rounded-3xl font-semibold font-white bg-gray-200"
           target="_blank"
         >
-          <FontAwesomeIcon icon={faChrome} /> Open Live Application
+          <FontAwesomeIcon icon={faChrome} /> Open Live
         </Link>
       </div>
     </div>
