@@ -34,8 +34,8 @@ function Info() {
   };
 
   return (
-    <div className="flex gap-6 overflow-hidden relative h-[calc(100vh_-_80px)] flex-col items-center">
-      <div className="mt-8">
+    <div className="h-[calc(100vh_-_80px)] relative flex flex-col items-center justify-center px-4 py-20 text-center">
+      <div className="my-8">
         <Image
           src={Avatar}
           width={300}
@@ -46,37 +46,26 @@ function Info() {
           className="rounded-full border-4 border-zinc-100 shadow-[0px_3px_30px_0px_#44337a]"
         />
       </div>
-      <TypeAnimation
-        sequence={[
-          // Same substring at the start will only be typed out once, initially
-          "I am Arush Sharma",
-          3000, // wait 1s before replacing "Mice" with "Hamsters"
-          "I am Software Engineer",
-          4000,
-          "I am Full Stack Developer",
-          4000,
-        ]}
-        wrapper="span"
-        speed={50}
-        className="text-xl md:text-4xl font-bold relative top-4"
-        repeat={Infinity}
-      />
 
-      <motion.p
-        initial={{ y: -10 }}
-        animate={{ y: 0, transition: { type: "spring", duration: 2 } }}
-        className="px-2 z-[99999] text-md leading-6 md:text-2xl w-full md:w-[1400px] text-center mt-12"
-      >
-        I am a passionate developer with{" "}
-        <b className="text-violet-800">3+ years</b> of unprofessional experience
-        in project development. My expertise lies in both{" "}
-        <b className="text-violet-800">frontend and backend development</b>. I
-        specialize in creating dynamic user interfaces using React.js and
-        building robust backend services with Node.js. Whether it’s crafting
-        elegant frontend components or designing efficient APIs, I thrive on
-        solving complex problems and delivering seamless user experiences.
-      </motion.p>
+      {/* Rotating pink blob behind text */}
+      <div className="relative inline-block my-6">
+        <div className="absolute -inset-2 bg-violet-200 rounded-full blur-xl opacity-30 animate-spin-slow" />
+        <p className="relative z-10 text-lg sm:text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">
+          Hi there! I'm a passionate Backend & DevOps Engineer with 2+ years of
+          experience in building scalable systems and automating deployment
+          pipelines.
+        </p>
+      </div>
+
+      <p className="max-w-3xl text-gray-600 text-sm sm:text-base md:text-lg">
+        I specialize in designing and implementing high-performance
+        microservices, containerized applications, and cloud infrastructure. My
+        approach combines technical expertise with a strong focus on best
+        practices and security.
+      </p>
+
       <Social />
+
       <motion.div
         className="relative"
         initial={{ y: -5 }}
@@ -97,7 +86,7 @@ function Info() {
         animate="animate"
         className="absolute w-[100%] text-[50vh] text-violet-700/10  whitespace-nowrap bottom-[-180px]"
       >
-        Coder YouTuber Influencer
+        Coder
       </motion.div>
     </div>
   );
