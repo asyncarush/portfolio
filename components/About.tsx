@@ -9,9 +9,9 @@ export default function About() {
       <div className="relative inline-block mb-6">
         <div className="absolute -inset-2 bg-pink-300 rounded-full blur-xl opacity-30 animate-spin-slow" />
         <p className="relative z-10 text-lg sm:text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">
-          Hi there! I'm a passionate Backend & DevOps Engineer with 5+ years of
-          experience in building scalable systems and automating deployment
-          pipelines.
+          Hi there! I&apos;m a passionate Backend & DevOps Engineer with 5+
+          years of experience in building scalable systems and automating
+          deployment pipelines.
         </p>
       </div>
 
