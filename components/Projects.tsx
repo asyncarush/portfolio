@@ -3,6 +3,8 @@ import Project from "./Project";
 
 import makematesThumbnail from "@/public/makematesThumbnail.png";
 import chat from "@/public/chat.png";
+import impactgenine from "@/public/impactgenie.png";
+
 import {
   FirebaseBadge,
   NextjsBadge,
@@ -18,7 +20,7 @@ export default function Projects() {
     {
       id: 1,
       mainImage: makematesThumbnail,
-      desc: "Makemates Social media website",
+      desc: "MakeMates, an AI-powered social media platform that enhances user engagement through AI-generated content suggestions, real-time chat, and optimized post discovery.",
       liveHref: "https://makemates-2024.vercel.app/",
       githubHref: "https://github.com/asyncarush/makemates",
       techStack: [
@@ -44,12 +46,25 @@ export default function Projects() {
         <TypescriptBadge key="ts" />,
       ],
     },
+    {
+      id: 3,
+      mainImage: impactgenine,
+      desc: "Developed ImpactGenie, an AI-powered video management platform that enhances YouTube content creation by automating metadata generation.",
+      liveHref: "https://codetonic.netlify.app/login",
+      githubHref: "https://github.com/asyncarush/CodeTonic--Realtime-Chat-App",
+      techStack: [
+        <NextjsBadge key="nextjs" />,
+        <TailwindBadge key="tailwind" />,
+        <FirebaseBadge key="firebase" />,
+        <TypescriptBadge key="ts" />,
+      ],
+    },
   ]);
 
   return (
-    <div className="flex md:flex-row flex-col items-center mb-12 md:w-[1400px] justify-center gap-8">
+    <div className="flex md:flex-row flex-col items-center mb-12 md:w-[1320px] flex-wrap justify-center gap-8 ">
       {/* Project Component */}
-
+      {/* <div className="flex md:flex-row flex-col items-center justify-start gap-8"> */}
       {allProject.map((project) => (
         <Project
           key={project.id}
@@ -60,6 +75,7 @@ export default function Projects() {
           techStack={project.techStack}
         />
       ))}
+      {/* </div> */}
     </div>
   );
 }

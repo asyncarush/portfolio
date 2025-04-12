@@ -56,7 +56,7 @@ export default function Project({
 
       <div className="flex flex-col items-center justify-evenly border-red-500 h-[250px]">
         <div>
-          <p className="">{desc}</p>
+          <p className="p-3">{desc}</p>
         </div>
 
         <div className="flex align-center justify-center flex-wrap gap-1 p-2">

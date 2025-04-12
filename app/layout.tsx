@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { Fira_Code } from "next/font/google";
+import { Fira_Code, Poppins } from "next/font/google";
 
-const firacode = Fira_Code({ subsets: ["latin"] });
+// const firacode = Fira_Code({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 export const metadata: Metadata = {
   title: "<CodeTonic/>",
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${firacode.className} text-black flex justify-center`}>
+      <body
+        className={`${poppins.className} text-black flex justify-center overflow-x-hidden`}
+      >
         {children}
       </body>
     </html>

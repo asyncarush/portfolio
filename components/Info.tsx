@@ -14,7 +14,7 @@ function Info() {
       x: 0,
     },
     animate: {
-      x: "-220%",
+      x: "-120%",
       transition: {
         repeat: Infinity,
         duration: 30,
@@ -34,8 +34,18 @@ function Info() {
   };
 
   return (
-    <div className="h-[calc(100vh_-_80px)] relative flex flex-col items-center justify-center px-4 py-20 text-center">
-      <div className="my-8">
+    <div className="h-[calc(100vh_-_80px)] -mt-20 relative flex flex-col items-center justify-center text-center">
+      <motion.div
+        initial={{ y: "-10px" }}
+        animate={{ y: "0px" }}
+        transition={{
+          delay: 0.3,
+          duration: 1,
+          type: "spring",
+          stiffness: 100, // Goes up and down
+        }}
+        className="my-8"
+      >
         <Image
           src={Avatar}
           width={300}
@@ -45,7 +55,7 @@ function Info() {
           loading="lazy"
           className="rounded-full border-4 border-zinc-100 shadow-[0px_3px_30px_0px_#44337a]"
         />
-      </div>
+      </motion.div>
 
       {/* Rotating pink blob behind text */}
       <div className="relative inline-block my-6 w-[80%]">
@@ -85,9 +95,9 @@ function Info() {
         variants={sliderVarient}
         initial="initial"
         animate="animate"
-        className="absolute w-[100%] text-[50vh] text-violet-700/10  whitespace-nowrap bottom-[-180px]"
+        className="absolute text-[50vh] text-violet-700/10  whitespace-nowrap bottom-[-180px]"
       >
-        Coder
+        Backend DevOps Cloud
       </motion.div>
     </div>
   );

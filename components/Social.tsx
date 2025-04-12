@@ -16,7 +16,7 @@ export default function Social() {
       initial={{ scale: 1 }}
       animate={{ scale: 1.3 }}
       transition={{ ease: "easeOut" }}
-      className="mt-8 z-[9999]"
+      className="mt-8"
     >
       <p className="social-container flex gap-5">
         <Link
