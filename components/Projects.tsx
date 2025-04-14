@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Project from "./Project";
 
-import makematesThumbnail from "@/public/makematesThumbnail.png";
+import makematesThumbnail from "@/public/makemates.png";
 import chat from "@/public/chat.png";
 import impactgenine from "@/public/impactgenie.png";
 
@@ -21,7 +21,7 @@ export default function Projects() {
       id: 1,
       mainImage: makematesThumbnail,
       desc: "MakeMates, an AI-powered social media platform that enhances user engagement through AI-generated content suggestions, real-time chat, and optimized post discovery.",
-      liveHref: "https://makemates-2024.vercel.app/",
+      liveHref: "https://makemates.vercel.app/",
       githubHref: "https://github.com/asyncarush/makemates",
       techStack: [
         <NextjsBadge key="nextjs" />,
@@ -50,8 +50,8 @@ export default function Projects() {
       id: 3,
       mainImage: impactgenine,
       desc: "Developed ImpactGenie, an AI-powered video management platform that enhances YouTube content creation by automating metadata generation.",
-      liveHref: "https://codetonic.netlify.app/login",
-      githubHref: "https://github.com/asyncarush/CodeTonic--Realtime-Chat-App",
+      liveHref: "https://impactgenine.vercel.app",
+      githubHref: "https://github.com/asyncarush/impactgenie",
       techStack: [
         <NextjsBadge key="nextjs" />,
         <TailwindBadge key="tailwind" />,
