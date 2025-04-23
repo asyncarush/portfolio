@@ -67,7 +67,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="https://drive.google.com/file/d/1VwQqh-1hWs8uYPE0UYweeiVfsFVDBT9X/view?usp=sharing"
+              href="https://drive.google.com/file/d/1oKK3R7kGAB-XNzQu8TdenNXR_gxUXN_k/view?usp=sharing"
               className="flex gap-2 items-center justify-center rounded-xl border-2 py-2 px-4 hover:border-violet-500 hover:shadow-[0px_0px_17px_0px_#44337a] hover:rounded-2xl duration-800 transition"
             >
               <FaCloudDownloadAlt /> My Resume
