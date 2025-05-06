@@ -50,7 +50,7 @@ export default function Projects() {
       id: 3,
       mainImage: impactgenine,
       desc: "Developed ImpactGenie, an AI-powered video management platform that enhances YouTube content creation by automating metadata generation.",
-      liveHref: "https://impactgenine.asyncarush.com",
+      liveHref: "https://impactgenie.asyncarush.com",
       githubHref: "https://github.com/asyncarush/impactgenie",
       techStack: [
         <NextjsBadge key="nextjs" />,
@@ -62,7 +62,7 @@ export default function Projects() {
   ]);
 
   return (
-    <div className="flex md:flex-row flex-col items-center mb-12 md:w-[1320px] flex-wrap justify-center gap-8 ">
+    <div className="flex border-2 border-red-400 md:flex-row flex-col items-center mb-12 md:w-[1320px] flex-wrap justify-center gap-8 ">
       {/* Project Component */}
       {/* <div className="flex md:flex-row flex-col items-center justify-start gap-8"> */}
       {allProject.map((project) => (

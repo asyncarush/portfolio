@@ -20,7 +20,7 @@ export default function Project({
 }) {
   return (
     <div className="rounded-md overflow-hidden hover:scale-105 duration-300 justify-between cursor-pointer w-[400px] h-[500px] mt-12 bg-slate-100 shadow-[0px_3px_30px_0px_#44337a] flex flex-col items-center gap-8">
-      <div className="flex-1 group">
+      <div className="relative flex group">
         <Image
           src={mainImage}
           width={400}
@@ -58,7 +58,6 @@ export default function Project({
         <div>
           <p className="p-3">{desc}</p>
         </div>
-
         <div className="flex align-center justify-center flex-wrap gap-1 p-2">
           {techStack}
         </div>
