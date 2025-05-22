@@ -62,7 +62,7 @@ export default function Projects() {
   ]);
 
   return (
-    <div className="flex border-2 border-red-400 md:flex-row flex-col items-center mb-12 md:w-[1320px] flex-wrap justify-center gap-8 ">
+    <div className="flex md:flex-row flex-col items-center mb-12 md:w-[1320px] flex-wrap justify-center gap-8 ">
       {/* Project Component */}
       {/* <div className="flex md:flex-row flex-col items-center justify-start gap-8"> */}
       {allProject.map((project) => (
