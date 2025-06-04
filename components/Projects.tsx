@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Project from "./Project";
 
-import makematesThumbnail from "@/public/makemates.png";
+import makematesThumbnail from "@/public/makemates.jpeg";
 import chat from "@/public/chat.png";
 import impactgenine from "@/public/impactgenie.png";
 
