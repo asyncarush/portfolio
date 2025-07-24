@@ -39,7 +39,7 @@ const YouTubePage = () => {
             My YouTube Creations
           </h1>
           <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-            A collection of tutorials and projects I've shared with the
+            A collection of tutorials and projects I&apos;ve shared with the
             community.
           </p>
           <a
