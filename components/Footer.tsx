@@ -18,9 +18,7 @@ export default function Footer() {
           <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
             Arush Sharma
           </h2>
-          <p className="text-slate-400 text-sm mt-1">
-            Backend & AI Engineer
-          </p>
+          <p className="text-slate-400 text-sm mt-1">Backend & AI Engineer</p>
         </div>
 
         {/* Social Icons */}
@@ -74,7 +72,7 @@ export default function Footer() {
       {/* Bottom Text */}
       <div className="relative z-10 mt-10 text-center text-slate-400 text-sm">
         2025 • Built with <FaHeart className="inline text-red-500 mx-1" /> by
-        Arush
+        Arush Sharma
       </div>
     </footer>
   );
