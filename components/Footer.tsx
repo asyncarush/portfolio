@@ -19,7 +19,7 @@ export default function Footer() {
             Arush Sharma
           </h2>
           <p className="text-slate-400 text-sm mt-1">
-            Backend & DevOps Engineer
+            Backend & AI Engineer
           </p>
         </div>
 

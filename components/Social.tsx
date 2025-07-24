@@ -23,7 +23,7 @@ export default function Social() {
       </Link>
 
       <Link
-        href="https://www.instagram.com/hey__arush/"
+        href="https://www.instagram.com/async_arush/"
         className="instagram social text-pink-500"
         target="_blank"
       >

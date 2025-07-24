@@ -1,108 +1,112 @@
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { FaCloudDownloadAlt } from "react-icons/fa";
+"use client";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { FaBars, FaHome } from "react-icons/fa";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import { FaCloudDownloadAlt, FaBars } from "react-icons/fa";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/blog", label: "Blog" },
+  { href: "/youtube", label: "YouTube" },
+  { href: "/connect", label: "Connect" },
+];
+
+const headerVariant = {
+  hidden: { y: -20, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 120 } },
+};
 
 export default function Navbar() {
-  const headerVariant = {
-    initial: {
-      y: -10,
-    },
-    animate: {
-      y: 0,
-      transition: {
-        type: "spring",
-        durations: 10,
-      },
-    },
-  };
+  const pathname = usePathname();
 
   return (
-    <>
-      <motion.header
-        variants={headerVariant}
-        initial="initial"
-        animate="animate"
-        className="sticky top-0 bg-white z-[999999] opacity-90 flex  border-b-violet-900 shadow-violet-300 h-[80px] w-full drop-shadow-md items-center justify-between"
-      >
-        <div className="relative left-12">
-          <Link href="/" className="text-violet-900  text-3xl font-bold">
-            {/* <Image src={Logo} width="220" height="100" alt="codetonic logo" /> */}
-            {`<CodeTonic />`}
-          </Link>
-        </div>
+    <motion.header
+      variants={headerVariant}
+      initial="hidden"
+      animate="visible"
+      className="sticky top-0 bg-white/80 backdrop-blur-md z-50 border-b border-slate-200 shadow-sm"
+    >
+      <nav className="container mx-auto px-6 flex justify-between items-center h-20">
+        <Link
+          href="/"
+          className="text-violet-800 text-3xl font-bold tracking-tighter"
+        >
+          {`<CodeTonic />`}
+        </Link>
 
-        <ul className="hidden md:flex gap-12 text-md items-center pr-8 font-medium">
-          <li>
-            <Link
-              href="/"
-              className="bg-violet-900 py-2 px-4 rounded-xl text-white text-md duration-300 hover:shadow-[0px_0px_17px_0px_#44337a] hover:rounded-2xl"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/blog"
-              className="bg-violet-900 py-2 px-4 rounded-xl text-white text-md duration-300 hover:shadow-[0px_0px_17px_0px_#44337a] hover:rounded-2xl"
-            >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/blog"
-              className="bg-violet-900 py-2 px-4 rounded-xl text-white text-md duration-300 hover:shadow-[0px_0px_17px_0px_#44337a] hover:rounded-2xl"
-            >
-              Connect
-            </Link>
-          </li>
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex items-center gap-2 font-medium">
+          {navLinks.map(({ href, label }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className={`px-4 py-2 rounded-md text-sm transition-colors duration-300 ${
+                  pathname === href
+                    ? "bg-violet-600 text-white shadow-md"
+                    : "text-gray-600 hover:bg-violet-100 hover:text-violet-800"
+                }`}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
           <li>
             <Link
               href="https://drive.google.com/file/d/1zlX-JDj-mr-YOgSbjFWTzylVR-ku-n6y/view?usp=sharing"
-              className="flex gap-2 items-center justify-center rounded-xl border-2 py-2 px-4 hover:border-violet-500 hover:shadow-[0px_0px_17px_0px_#44337a] hover:rounded-2xl duration-800 transition"
-              target="_top"
+              className="flex items-center gap-2 ml-4 px-4 py-2 rounded-md text-sm text-violet-700 border-2 border-violet-500 hover:bg-violet-500 hover:text-white hover:shadow-lg transition-all duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <FaCloudDownloadAlt /> My Resume
+              <FaCloudDownloadAlt />
+              <span>My Resume</span>
             </Link>
           </li>
         </ul>
-        <div className="md:hidden md:z-[999999999]">
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
           <Sheet>
-            <SheetTrigger className="pr-8">
-              <FaBars className=" w-6 h-6" />
+            <SheetTrigger asChild>
+              <button className="p-2 rounded-md text-gray-700 hover:bg-gray-100">
+                <FaBars className="w-6 h-6" />
+              </button>
             </SheetTrigger>
-            <SheetContent className="w-full top-[80px]">
-              <SheetHeader>
-                <SheetDescription>
-                  <ul className="flex flex-col gap-8">
-                    <li>
-                      <Link href="/">HOME</Link>
+            <SheetContent side="right" className="w-full max-w-xs p-6">
+              <div className="mt-8">
+                <ul className="flex flex-col gap-4">
+                  {navLinks.map(({ href, label }) => (
+                    <li key={href}>
+                      <Link
+                        href={href}
+                        className={`block px-4 py-3 rounded-md text-lg font-medium transition-colors duration-300 ${
+                          pathname === href
+                            ? "bg-violet-600 text-white"
+                            : "text-gray-700 hover:bg-violet-100"
+                        }`}
+                      >
+                        {label}
+                      </Link>
                     </li>
-                    <li>
-                      <Link href="/blog">BLOG</Link>
-                    </li>
-                    <li>
-                      <Link href="/youtube">YOUTUBE</Link>
-                    </li>
-                    <li>
-                      <Link href="/connect">CONNECT</Link>
-                    </li>
-                  </ul>
-                </SheetDescription>
-              </SheetHeader>
+                  ))}
+                  <li className="pt-4 border-t border-gray-200">
+                    <Link
+                      href="https://drive.google.com/file/d/1zlX-JDj-mr-YOgSbjFWTzylVR-ku-n6y/view?usp=sharing"
+                      className="flex items-center gap-3 px-4 py-3 rounded-md text-lg font-medium text-violet-700 hover:bg-violet-100 transition-colors duration-300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaCloudDownloadAlt />
+                      <span>My Resume</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
-      </motion.header>
-    </>
+      </nav>
+    </motion.header>
   );
 }

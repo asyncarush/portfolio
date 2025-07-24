@@ -5,6 +5,8 @@ import Info from "@/components/Info";
 import Navbar from "@/components/Navbar";
 import Populars from "@/components/Popular";
 import Skills from "@/components/Skills";
+import LatestBlogs from '@/components/LatestBlogs';
+import LatestVideos from '@/components/LatestVideos';
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <Info />
       <Skills />
       <Populars />
+      <LatestBlogs />
+      <LatestVideos />
       <Footer />
     </main>
   );
