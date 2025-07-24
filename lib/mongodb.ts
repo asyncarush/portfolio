@@ -1,4 +1,16 @@
-import mongoose from "mongoose";
+import mongoose, { ConnectOptions } from "mongoose";
+
+// Define the type for our mongoose cache
+interface MongooseCache {
+  conn: typeof mongoose | null;
+  promise: Promise<typeof mongoose> | null;
+}
+
+declare global {
+  // This declares the type for the global mongoose cache
+  // eslint-disable-next-line no-var
+  var mongoose: MongooseCache;
+}
 
 const MONGODB_URI =
   process.env.NEXT_MONGODB_URI ||
@@ -10,13 +22,18 @@ if (!MONGODB_URI) {
   );
 }
 
-let cached = global.mongoose;
+// Initialize the global mongoose cache if it doesn't exist
+const globalWithMongoose = global as typeof globalThis & {
+  mongoose: MongooseCache;
+};
+
+let cached = globalWithMongoose.mongoose;
 
 if (!cached) {
-  cached = global.mongoose = { conn: null, promise: null };
+  cached = globalWithMongoose.mongoose = { conn: null, promise: null };
 }
 
-async function dbConnect() {
+async function dbConnect(): Promise<typeof mongoose> {
   if (cached.conn) {
     return cached.conn;
   }

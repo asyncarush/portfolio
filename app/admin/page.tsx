@@ -1,10 +1,19 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import ReactQuill from "react-quill";
+import dynamic from 'next/dynamic';
 import "react-quill/dist/quill.snow.css";
 import { quillModulesWithImage } from "./QuillImageHandler";
 import Navbar from "@/components/Navbar";
+
+// Dynamically import ReactQuill with SSR disabled
+const ReactQuill = dynamic(
+  () => import('react-quill'),
+  { 
+    ssr: false,
+    loading: () => <p>Loading editor...</p>
+  }
+);
 
 export default function AdminBlogPage() {
   const [title, setTitle] = useState("");

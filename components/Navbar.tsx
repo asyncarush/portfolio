@@ -10,7 +10,6 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/blog", label: "Blog" },
   { href: "/youtube", label: "YouTube" },
-  { href: "/connect", label: "Connect" },
 ];
 
 const headerVariant = {

@@ -20,7 +20,7 @@ export default function SingleBlogPage() {
 
   useEffect(() => {
     if (id) {
-      async function fetchBlog() {
+      const fetchBlog = async () => {
         try {
           const response = await fetch(`/api/blogs/${id}`);
           const result = await response.json();
@@ -33,8 +33,7 @@ export default function SingleBlogPage() {
           console.error("Error fetching blog:", error);
         }
         setLoading(false);
-      }
-
+      };
       fetchBlog();
     }
   }, [id]);
