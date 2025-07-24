@@ -59,17 +59,16 @@ function Info() {
       {/* Rotating pink blob behind text */}
       <div className="relative inline-block my-6 w-[80%]">
         <p className="relative z-10 text-lg sm:text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">
-          Hi there! I&apos;m a passionate Backend & DevOps Engineer with 2+
-          years of experience in building scalable systems and automating
-          deployment pipelines.
+          Hi there! I&apos;m a passionate Backend & AI Engineer with 2+ years of
+          experience in building scalable backend systems and AI Agents.
         </p>
       </div>
 
       <p className="max-w-3xl text-gray-600 text-sm sm:text-base md:text-lg">
-        I specialize in designing and implementing high-performance
-        microservices, containerized applications, and cloud infrastructure. My
-        approach combines technical expertise with a strong focus on best
-        practices and security.
+        I specialize in designing and implementing high-performance backend
+        Services, RAG LLMs, containerized applications, and cloud
+        infrastructure. My approach combines technical expertise with a strong
+        focus on best practices and security.
       </p>
 
       <Social />
@@ -95,7 +94,7 @@ function Info() {
         animate="animate"
         className="absolute text-[50vh] text-violet-700/10  whitespace-nowrap bottom-[-180px]"
       >
-        Backend DevOps Cloud
+        Backend AI DevOps
       </motion.div>
     </div>
   );
