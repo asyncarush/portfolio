@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import DOMPurify from 'dompurify';
-import Navbar from '@/components/Navbar';
+import React, { useState, useEffect } from "react";
+import DOMPurify from "dompurify";
+import Navbar from "@/components/Navbar";
 
 interface Blog {
   _id: string;
@@ -16,20 +16,20 @@ export default function BlogPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchBlogs() {
+    const fetchBlogs = async () => {
       try {
-        const response = await fetch('/api/blogs');
+        const response = await fetch("/api/blogs");
         const result = await response.json();
         if (result.success) {
           setBlogs(result.data);
         } else {
-          console.error('Failed to fetch blogs:', result.error);
+          console.error("Failed to fetch blogs:", result.error);
         }
       } catch (error) {
-        console.error('Error fetching blogs:', error);
+        console.error("Error fetching blogs:", error);
       }
       setLoading(false);
-    }
+    };
 
     fetchBlogs();
   }, []);
@@ -46,21 +46,37 @@ export default function BlogPage() {
         ) : blogs.length > 0 ? (
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogs.map((blog) => (
-              <div key={blog._id} className="bg-white p-6 rounded-xl shadow-lg border border-violet-200 flex flex-col">
-                <h2 className="text-2xl font-bold mb-2 text-violet-800">{blog.title}</h2>
-                <p className="text-sm text-gray-500 mb-4">Posted on {new Date(blog.createdAt).toLocaleDateString()}</p>
+              <div
+                key={blog._id}
+                className="bg-white p-6 rounded-xl shadow-lg border border-violet-200 flex flex-col"
+              >
+                <h2 className="text-2xl font-bold mb-2 text-violet-800">
+                  {blog.title}
+                </h2>
+                <p className="text-sm text-gray-500 mb-4">
+                  Posted on {new Date(blog.createdAt).toLocaleDateString()}
+                </p>
                 <div
                   className="text-gray-700 mb-4 flex-grow"
-                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(blog.content.substring(0, 150) + '...') }}
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(
+                      blog.content.substring(0, 150) + "..."
+                    ),
+                  }}
                 />
-                <a href={`/blog/${blog._id}`} className="text-violet-600 hover:text-violet-800 font-semibold self-end">
+                <a
+                  href={`/blog/${blog._id}`}
+                  className="text-violet-600 hover:text-violet-800 font-semibold self-end"
+                >
                   Read More
                 </a>
               </div>
             ))}
           </div>
         ) : (
-          <p className="text-center text-lg text-gray-600">No blog posts found.</p>
+          <p className="text-center text-lg text-gray-600">
+            No blog posts found.
+          </p>
         )}
       </main>
     </div>

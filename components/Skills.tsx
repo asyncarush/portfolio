@@ -6,7 +6,6 @@ import cpp from "@/public/cpp.png";
 import html from "@/public/html.png";
 import css from "@/public/css.png";
 import typescript from "@/public/typescript.png";
-import go from "@/public/go.png";
 import python from "@/public/python.png";
 import react from "@/public/react.webp";
 import next from "@/public/next.png";
@@ -24,21 +23,22 @@ import langgraph from "@/public/langgraph.png";
 
 const skillsData = {
   "Languages & Frameworks": [
-    { name: "C++", icon: cpp },
+    // { name: "C++", icon: cpp },
     { name: "HTML", icon: html },
     { name: "CSS", icon: css },
     { name: "TypeScript", icon: typescript },
-    { name: "Go", icon: go },
     { name: "Python", icon: python },
     { name: "React", icon: react },
     { name: "Next.js", icon: next },
   ],
   "Databases & DevOps": [
     { name: "MongoDB", icon: mongodb },
+    { name: "PostgreSQL", icon: api }, // Using API icon as a placeholder for PostgreSQL
     { name: "Redis", icon: redis },
     { name: "Firebase", icon: firebase },
     { name: "Ubuntu", icon: ubuntu },
     { name: "Docker", icon: docker },
+    { name: "Kubernetes", icon: api }, // Using API icon as a placeholder for Kubernetes
     { name: "GitHub", icon: github },
   ],
   "AI Engineering": [
@@ -50,7 +50,13 @@ const skillsData = {
 
 const SkillCard = ({ name, icon }: { name: string; icon: StaticImageData }) => (
   <div className="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-200">
-    <Image src={icon} alt={name} width={64} height={64} className="object-contain" />
+    <Image
+      src={icon}
+      alt={name}
+      width={64}
+      height={64}
+      className="object-contain"
+    />
     <p className="mt-2 text-sm font-semibold text-gray-700">{name}</p>
   </div>
 );
@@ -59,11 +65,15 @@ const Skills = () => {
   return (
     <div className="py-16 bg-slate-50">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">Skills</h1>
+        <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
+          Skills
+        </h1>
         <div className="space-y-12">
           {Object.entries(skillsData).map(([category, skills]) => (
             <div key={category}>
-              <h2 className="text-2xl font-semibold text-center mb-6 text-gray-700">{category}</h2>
+              <h2 className="text-2xl font-semibold text-center mb-6 text-gray-700">
+                {category}
+              </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {skills.map((skill) => (
                   <SkillCard key={skill.name} {...skill} />
