@@ -26,7 +26,8 @@ const ContactForm = () => {
       >
         <h3 className="text-2xl font-bold text-green-600 mb-2">Thank You!</h3>
         <p className="text-gray-700">
-          Your message has been sent successfully. I'll get back to you soon!
+          Your message has been sent successfully. I&apos;ll get back to you
+          soon!
         </p>
       </motion.div>
     );
@@ -43,12 +44,12 @@ const ContactForm = () => {
           Get in Touch
         </h2>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-5">
-          Let's <span className="text-violet-600">Work Together</span>
+          Let&apos;s <span className="text-violet-600">Work Together</span>
         </h1>
         <div className="w-16 h-1 bg-violet-600 mx-auto rounded-full mb-6"></div>
         <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
           Have a project in mind or need technical assistance? Drop me a message
-          and I'll get back to you as soon as possible.
+          and I&apos;ll get back to you as soon as possible.
         </p>
       </div>
 
