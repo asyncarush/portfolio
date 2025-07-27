@@ -10,6 +10,7 @@
     "ensure-dirs": "node scripts/ensure-dirs.js"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@radix-ui/react-dialog": "^1.0.5",

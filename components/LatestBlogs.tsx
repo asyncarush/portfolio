@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { FaRss } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { FaRss } from "react-icons/fa";
 
 interface IBlog {
   _id: string;
@@ -16,7 +16,7 @@ const LatestBlogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch('/api/blogs');
+        const response = await fetch("/api/blogs");
         if (response.ok) {
           const data = await response.json();
           if (data.success && Array.isArray(data.data)) {
@@ -24,7 +24,7 @@ const LatestBlogs = () => {
           }
         }
       } catch (error) {
-        console.error('Failed to fetch blogs:', error);
+        console.error("Failed to fetch blogs:", error);
       } finally {
         setLoading(false);
       }
@@ -44,8 +44,17 @@ const LatestBlogs = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogs.map((blog) => (
-              <Link href={`/blog/${blog._id}`} key={blog._id} className="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-gray-800 truncate" title={blog.title}>{blog.title}</h3>
+              <Link
+                href={`/blog/${blog._id}`}
+                key={blog._id}
+                className="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <h3
+                  className="text-xl font-semibold text-gray-800 truncate"
+                  title={blog.title}
+                >
+                  {blog.title}
+                </h3>
               </Link>
             ))}
           </div>

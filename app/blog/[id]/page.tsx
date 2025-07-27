@@ -17,7 +17,7 @@ interface Blog {
 // Helper function to process content and ensure image URLs are correct
 const processContentImages = (content: string): string => {
   if (!content) return content;
-  
+
   // Process image URLs in the content
   return processImageUrls(content);
 };
@@ -39,7 +39,7 @@ export default function SingleBlogPage() {
             // Process the content to fix image paths
             const processedBlog = {
               ...result.data,
-              content: processContentImages(result.data.content)
+              content: processContentImages(result.data.content),
             };
             setBlog(processedBlog);
           } else {
@@ -59,11 +59,20 @@ export default function SingleBlogPage() {
   const renderContent = (htmlContent: string) => {
     // Process image URLs first
     const processedContent = processImageUrls(htmlContent);
-    
+
     // Sanitize the HTML content
     const sanitizedContent = DOMPurify.sanitize(processedContent, {
-      ADD_TAGS: ['img'],
-      ADD_ATTR: ['loading', 'decoding', 'src', 'alt', 'width', 'height', 'style', 'class'],
+      ADD_TAGS: ["img"],
+      ADD_ATTR: [
+        "loading",
+        "decoding",
+        "src",
+        "alt",
+        "width",
+        "height",
+        "style",
+        "class",
+      ],
       // Allow data attributes for lazy loading
       ALLOW_DATA_ATTR: true,
       // Allow classes for styling
@@ -96,7 +105,7 @@ export default function SingleBlogPage() {
           <div className="text-center">
             <p className="text-lg text-gray-600 mb-4">Blog post not found.</p>
             <button
-              onClick={() => router.push('/blog')}
+              onClick={() => router.push("/blog")}
               className="px-4 py-2 bg-violet-600 text-white rounded hover:bg-violet-700 transition-colors"
             >
               Back to Blog
