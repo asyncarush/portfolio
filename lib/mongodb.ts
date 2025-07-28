@@ -1,14 +1,11 @@
-import mongoose, { ConnectOptions } from "mongoose";
+import mongoose from "mongoose";
 
-// Define the type for our mongoose cache
 interface MongooseCache {
   conn: typeof mongoose | null;
   promise: Promise<typeof mongoose> | null;
 }
 
 declare global {
-  // This declares the type for the global mongoose cache
-  // eslint-disable-next-line no-var
   var mongoose: MongooseCache;
 }
 

@@ -24,7 +24,7 @@ export default function Footer() {
         {/* Social Icons */}
         <div className="flex space-x-6 text-xl text-slate-400">
           <a
-            href="https://github.com/arush-sharma"
+            href="https://github.com/asyncarush"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#6e5494] transition"
@@ -32,7 +32,7 @@ export default function Footer() {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/arush-sharma"
+            href="https://linkedin.com/in/heyarush"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#0077b5] transition"
@@ -40,7 +40,7 @@ export default function Footer() {
             <FaLinkedin />
           </a>
           <a
-            href="https://twitter.com/arush_sharma"
+            href="https://twitter.com/heyarush"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#1da1f2] transition"
@@ -48,7 +48,7 @@ export default function Footer() {
             <FaTwitter />
           </a>
           <a
-            href="https://instagram.com/arush.codes"
+            href="https://instagram.com/async_arush"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#e4405f] transition"
@@ -60,7 +60,7 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <a
-            href="mailto:arush.sharma@example.com"
+            href="mailto:admin@asyncarush.com"
             className="flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm hover:bg-white/20 transition"
           >
             <FaEnvelope />
