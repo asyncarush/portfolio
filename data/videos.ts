@@ -1,19 +1,18 @@
 export const videos = [
   {
-    id: "bPDrctb9z7s",
+    id: "SPVo_H2gRGs",
     title:
-      "Create an Awesome Portfolio Website with AI in Just 15 Minutes | Part 2",
-    src: `https://youtu.be/bPDrctb9z7s`,
+      "Query Routing in LangChain | Tavily Integration to RAG | GenAI Engg.",
+    src: `https://www.youtube.com/watch?v=SPVo_H2gRGs`,
   },
   {
-    id: "N2dN_Pq3N6Y",
-    title:
-      "How Windsurf by Codeium Can Supercharge Your Coding Workflow | Part 1",
-    src: `https://www.youtube.com/watch?v=N2dN_Pq3N6Y`,
+    id: "Hzs_jTr3UY8",
+    title: "Vectors & Indexing in Depth (2025) | Indexing Techniques | GenAI",
+    src: `https://www.youtube.com/watch?v=Hzs_jTr3UY8`,
   },
   {
-    id: "01wvK8CnW3k",
-    title: "How to use Inspect Tool in Chrome",
-    src: `https://www.youtube.com/watch?v=01wvK8CnW3k`,
+    id: "ROZFAQPILvs",
+    title: "Build RAG App using LangChain | Part-2 | GenAI Engineering",
+    src: `https://www.youtube.com/watch?v=ROZFAQPILvs`,
   },
 ];

@@ -20,7 +20,7 @@ const LatestVideos = () => {
               rel="noopener noreferrer"
               className="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
             >
-              <div className="relative w-full h-48">
+              <div className="relative w-full h-60">
                 <Image
                   src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
                   alt={video.title}

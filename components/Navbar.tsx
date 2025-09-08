@@ -9,7 +9,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/blog", label: "Blog" },
-  { href: "/youtube", label: "YouTube" },
+  {
+    href: "https://www.youtube.com/channel/UCv5XDLZaTlEbfI4upd3E3oA",
+    label: "YouTube",
+  },
 ];
 
 const headerVariant = {
@@ -53,7 +56,7 @@ export default function Navbar() {
           ))}
           <li>
             <Link
-              href="https://drive.google.com/file/d/1zlX-JDj-mr-YOgSbjFWTzylVR-ku-n6y/view?usp=sharing"
+              href="https://drive.google.com/file/d/1zBNr-hbgLuMKNR_LuNBT8wKUqAwStMZs/view?usp=sharing"
               className="flex items-center gap-2 ml-4 px-4 py-2 rounded-md text-sm text-violet-700 border-2 border-violet-500 hover:bg-violet-500 hover:text-white hover:shadow-lg transition-all duration-300"
               target="_blank"
               rel="noopener noreferrer"

@@ -17,9 +17,16 @@ import api from "@/public/api.webp";
 import github from "@/public/github.png";
 import mongodb from "@/public/mongodb.png";
 
-// Import new skill icons (assuming they are placed in /public)
+// Import AI/ML skill icons (assuming they are placed in /public)
 import langchain from "@/public/langchain.svg";
 import langgraph from "@/public/langgraph.png";
+import fastapi from "@/public/fastapi.png";
+import llamaindex from "@/public/llamaindex.jpeg";
+import openai from "@/public/openai.png";
+import pandas from "@/public/pandas.png";
+import numpy from "@/public/numpy.webp";
+import pytorch from "@/public/pytorch.avif";
+import ml from "@/public/ml.webp"; // Machine Learning icon
 
 const skillsData = {
   "Languages & Frameworks": [
@@ -44,6 +51,13 @@ const skillsData = {
   "AI Engineering": [
     { name: "LangChain", icon: langchain },
     { name: "LangGraph", icon: langgraph },
+    { name: "FastAPI", icon: fastapi },
+    { name: "LlamaIndex", icon: llamaindex },
+    { name: "OpenAI", icon: openai },
+    { name: "Pandas", icon: pandas },
+    { name: "NumPy", icon: numpy },
+    { name: "PyTorch", icon: pytorch },
+    { name: "Machine Learning", icon: ml },
     { name: "RAG", icon: api }, // Using API icon as a placeholder for RAG
   ],
 };
